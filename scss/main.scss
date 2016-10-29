@@ -1,0 +1,9 @@
+@import "variables";
+@import "myBoot";
+
+body {
+	background: green; 
+}
+.main-container {
+	@extend .container;
+}

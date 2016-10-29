@@ -15,8 +15,7 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "styles.css"
+        "main.css"
       ],
       "scripts": [
       "../node_modules/jquery/dist/jquery.js",

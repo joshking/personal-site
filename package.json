@@ -30,6 +30,7 @@
     "angular-cli": "1.0.0-beta.16",
     "codelyzer": "~0.0.26",
     "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
