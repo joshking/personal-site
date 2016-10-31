@@ -1,9 +1,6 @@
 @import "variables";
 @import "myBoot";
+@import "home";
+@import "about";
+@import "contact";
 
-body {
-	background: green; 
-}
-.main-container {
-	@extend .container;
-}

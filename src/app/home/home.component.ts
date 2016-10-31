@@ -1,15 +1,44 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+	Component, 
+	OnInit,
+	Input,
+	trigger,
+	state,
+	style,
+	transition,
+	animate } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  host: {
+	 '[@routeAnimation]': 'true',
+   '[style.display]': "'block'",
+   '[style.position]': "'absolute'",
+   '[style.left]' : "'0'",
+   '[style.right]' : "'0'"
+  },
+  animations: [
+    trigger('routeAnimation', [
+	    	
+	    	state('*', style({transform: 'translateX(0)', opacity: 1})),
+				
+				transition('void => *', [
+		      style({transform: 'translateX(-100%)'}),
+		      animate(100)
+		    ]),
+				transition('* => void', [
+					animate(0, style({opacity: 0, transform: 'translateX(100%)'}))
+				])
+				         
+    ])
+  ]
+
 })
 export class HomeComponent implements OnInit {
+	
+	constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	ngOnInit() {}
 
 }

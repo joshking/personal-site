@@ -3317,5 +3317,18 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
-body {
+.main-container {
+  margin-top: 100px;
+  position: relative; }
+
+.about {
+  width: 100%;
   background: green; }
+
+.contact {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: red; }
