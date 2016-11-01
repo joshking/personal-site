@@ -7,6 +7,7 @@ import {
 	style,
 	transition,
 	animate } from '@angular/core';
+	import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-work',
@@ -37,7 +38,7 @@ import {
 })
 export class WorkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
   }

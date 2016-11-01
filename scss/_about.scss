@@ -1,3 +1,10 @@
 .about {
 	margin-top: 60px;
 }
+.timeline {
+	
+	&__container {
+		@extend .container;
+	}
+	
+}
