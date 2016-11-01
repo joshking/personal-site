@@ -12,6 +12,7 @@ import {
   selector: 'app-about',
   templateUrl: './about.component.html',
   host: {
+	 '[@routeAnimation]': 'true',
    '[style.display]': "'block'",
    '[style.position]': "'absolute'",
    '[style.left]' : "'0'",
@@ -27,7 +28,7 @@ import {
 		      animate(100)
 		    ]),
 		    transition('* => void', [
-					animate(100, style({transform: 'translateX(100%)'}))
+					animate(100, style({opacity: 0, transform: 'translateX(100%)'}))
 				])
 		
          

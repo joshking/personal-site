@@ -16,7 +16,10 @@ import {
    '[style.display]': "'block'",
    '[style.position]': "'absolute'",
    '[style.left]' : "'0'",
-   '[style.right]' : "'0'"
+   '[style.right]' : "'0'",
+   '[style.top]' : "'0'",
+   '[style.bottom]' : "'0'",
+   '[style.background]' : "'#ccc'"
   },
   animations: [
     trigger('routeAnimation', [
@@ -28,7 +31,7 @@ import {
 		      animate(100)
 		    ]),
 				transition('* => void', [
-					animate(0, style({opacity: 0, transform: 'translateX(100%)'}))
+					animate(100, style({opacity: 0, transform: 'translateX(100%)'}))
 				])
 				         
     ])
