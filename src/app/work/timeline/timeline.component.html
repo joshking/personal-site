@@ -1,9 +1,39 @@
-			<ul>
-				<li><a routerLink="/work/ir">2000</a></li>
-				<li><a routerLink="/work/dealerspan">2004</a></li>
-				<li><a routerLink="/work/individual">2009</a></li>
-				<li><a routerLink="/work/dell">2012</a></li>
-				<li><a routerLink="/work/sofi">2016</a></li>
-			</ul>
+<div class="timeline">
+	
+	<ul class="timeline__list">
+		<li><span>2000</span>
+			<a routerLink="/work/ir" [routerLinkActive]="['active']">
+				<div class="ball"></div> <span>2000</span>
+			</a>
+		</li>
+		<li><span>2004</span>
+			<a routerLink="/work/dealerspan" [routerLinkActive]="['active']">
+				<div class="ball"></div> <span>2004</span>
+			</a>
+		</li>
+		<li><span>2009</span>
+			<a routerLink="/work/kinetic" [routerLinkActive]="['active']">
+				<div class="ball"></div> <span>2009</span>
+			</a>
+		</li>
+		<li><span>2010</span>
+			<a routerLink="/work/individual" [routerLinkActive]="['active']">
+				<div class="ball"></div> <span>2010</span>
+			</a>
+		</li>
+		<li><span>2012</span>
+			<a routerLink="/work/dell" [routerLinkActive]="['active']">
+				<div class="ball"></div> <span>2012</span>
+			</a>
+			</li>
+		<li><span>2015</span>
+			<a routerLink="/work/sofi" [routerLinkActive]="['active']">
+				<div class="ball"></div> <span>2015</span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="timeline__bar"></div>
+	
+</div>
 
-	  

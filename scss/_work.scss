@@ -1,3 +1,193 @@
+$timeline-base: #f2efe6;
+
 .work {
-	margin-top: $nav-height;
+	margin-top: 55px;
+	
+	&__col1 {
+		@include make-col(8);
+		
+		&--content {
+			padding: 0px 30px 30px 0px;
+		}
+		
+	}
+	&__col2 {
+		@include make-col(4);
+		
+		&--content {
+			padding: 0px 0px 10px 30px;
+		}
+		.skills {
+			
+			li {
+				margin-bottom: 10px;
+				color: #828282;
+				font-size: .9rem;
+				
+				i {
+					margin-right: 10px;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	&__detail {
+		@include make-col(12);
+	}
+	
+	.work-header {
+		height: auto;
+		
+		&__bar {
+			display: none;
+		}
+		
+		@include media-breakpoint-up(sm) {
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			height: 100px;
+			margin: 120px 0 40px 0;
+			
+			&__bar {
+				display: block;
+				position: absolute;
+				top: 52px;
+				width: 100%;
+				height: 4px;
+				background: $timeline-base;
+				z-index: -1;
+			}
+
+		}
+				
+	}
+	
+}
+
+%timeline-base {
+	width: 100%;
+	padding: 30px;
+
+	@include media-breakpoint-up(sm) {
+		max-width: 571px;
+		position: relative;
+		min-height: 100px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+}
+
+//TIMELINE
+.timeline {
+	@extend %timeline-base;
+	
+	&__bar {
+		display: none;
+	}
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		z-index: 2;
+		
+		li {
+			display: list-item;
+			margin-bottom: 15px;
+			text-align: left;
+			
+			a {
+				color: #969696;
+				font-size: 25px;
+				font-weight: lighter;
+			}
+			&:hover {
+				
+				.ball {
+					background: #a3c763
+				}
+				
+			}
+			.active {
+				
+				.ball {
+					background: #a3c763
+				}
+				
+			}
+			
+		}
+		span {
+			display: none;
+		}
+		
+	}
+	.ball {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: $timeline-base;
+		display: inline-block;
+		margin-right: 10px;
+	}
+	
+	//timeline desktop
+	@include media-breakpoint-up(sm) {
+		
+		.ball {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: block;
+		}
+		
+		&__bar {
+			display: block;
+			position: absolute;
+			top: 50px;
+			width: 99%;
+			height: 10px;
+			background: $timeline-base;
+			z-index: -1;
+		}
+		&__list {
+			
+			li {
+				display: inline-block;
+				margin-right: 50px;
+				
+				&:last-child {
+					margin-right: 0;
+				}
+				
+				span {
+					display: block;
+					text-align: center;
+					color: #969696;
+				}
+				
+				a {
+					display: block;
+					width: 50px;
+					height: 50px;
+					margin-top: 10px;
+					cursor: pointer;
+					
+					span {
+						display: none;
+					}
+					
+				}
+			
+			}
+			
+		}
+		
+	}
+
 }

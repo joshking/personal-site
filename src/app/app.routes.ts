@@ -10,6 +10,7 @@ import { DealerspanComponent } from './work/dealerspan/dealerspan.component';
 import { DellComponent } from './work/dell/dell.component';
 import { IndividualComponent } from './work/individual/individual.component';
 import { SofiComponent } from './work/sofi/sofi.component';
+import { KineticComponent } from './work/kinetic/kinetic.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
       { path: 'individual', component: IndividualComponent },
       { path: 'dell', 			component: DellComponent },
       { path: 'sofi', 			component: SofiComponent },
+      { path: 'kinetic', 		component: KineticComponent },
       { path: 'timeline', 	component: TimelineComponent }
     ]
   },

@@ -1,8 +1,23 @@
 .navbar {
 	height: $nav-height;
+	background-color: #191919;
+	color: #efefef;
 	
 	.nav {
 		margin-top: 0;	
 	}
 	
+	a {
+		color: #efefef;
+		text-decoration: none;
+	}
+	
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }

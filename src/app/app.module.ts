@@ -18,6 +18,7 @@ import { IndividualComponent } from './work/individual/individual.component';
 import { DellComponent } from './work/dell/dell.component';
 import { SofiComponent } from './work/sofi/sofi.component';
 import { TimelineComponent } from './work/timeline/timeline.component';
+import { KineticComponent } from './work/kinetic/kinetic.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TimelineComponent } from './work/timeline/timeline.component';
 		IndividualComponent,
   	DellComponent,
     SofiComponent,
-    TimelineComponent
+    TimelineComponent,
+    KineticComponent
   ],
   imports: [
     BrowserModule,
