@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -40,7 +41,8 @@ import { KineticComponent } from './work/kinetic/kinetic.component';
     BrowserModule,
     FormsModule,
     routing,
-    MaterialModule,
+    MaterialModule.forRoot(),
+    NgbModule.forRoot(),
     HttpModule
   ],
   providers: [],
