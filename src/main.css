@@ -3562,12 +3562,18 @@ ul {
   margin-top: 55px; }
   .work__col1 {
     float: left;
-    width: 66.66667%; }
+    width: 100%; }
     .work__col1--content {
-      padding: 0px 30px 30px 0px; }
+      padding: 30px; }
+    @media (min-width: 576px) {
+      .work__col1 {
+        float: left;
+        width: 66.66667%; }
+        .work__col1--content {
+          padding: 0px 30px 30px 0px; } }
   .work__col2 {
     float: left;
-    width: 33.33333%; }
+    width: 100%; }
     .work__col2--content {
       padding: 0px 0px 10px 30px; }
     .work__col2 .skills li {
@@ -3576,9 +3582,10 @@ ul {
       font-size: .9rem; }
       .work__col2 .skills li i {
         margin-right: 10px; }
-  .work__detail {
-    float: left;
-    width: 100%; }
+    @media (min-width: 576px) {
+      .work__col2 {
+        float: left;
+        width: 33.33333%; } }
   .work .work-header {
     height: auto; }
     .work .work-header__bar {
@@ -3626,13 +3633,16 @@ ul {
     .timeline__list li a {
       color: #969696;
       font-size: 25px;
-      font-weight: lighter; }
+      font-weight: lighter;
+      text-decoration: none; }
     .timeline__list li:hover .ball {
       background: #a3c763; }
     .timeline__list li .active .ball {
       background: #a3c763; }
-  .timeline__list span {
-    display: none; }
+    .timeline__list li span {
+      display: none; }
+    .timeline__list li .mobile-year {
+      display: inline-block; }
 
 .timeline .ball {
   width: 20px;
@@ -3672,4 +3682,6 @@ ul {
       margin-top: 10px;
       cursor: pointer; }
       .timeline__list li a span {
-        display: none; } }
+        display: none; }
+    .timeline__list li .mobile-year {
+      display: none; } }

@@ -4,15 +4,23 @@ $timeline-base: #f2efe6;
 	margin-top: 55px;
 	
 	&__col1 {
-		@include make-col(8);
+		@include make-col(12);
 		
 		&--content {
-			padding: 0px 30px 30px 0px;
+			padding: 30px;
+		}
+		@include media-breakpoint-up(sm) {
+			@include make-col(8);
+			
+			&--content {
+				padding: 0px 30px 30px 0px;
+			}
+		
 		}
 		
 	}
 	&__col2 {
-		@include make-col(4);
+		@include make-col(12);
 		
 		&--content {
 			padding: 0px 0px 10px 30px;
@@ -31,11 +39,10 @@ $timeline-base: #f2efe6;
 			}
 			
 		}
+		@include media-breakpoint-up(sm) {
+			@include make-col(4);
+		}
 		
-	}
-	
-	&__detail {
-		@include make-col(12);
 	}
 	
 	.work-header {
@@ -105,6 +112,7 @@ $timeline-base: #f2efe6;
 				color: #969696;
 				font-size: 25px;
 				font-weight: lighter;
+				text-decoration: none;
 			}
 			&:hover {
 				
@@ -120,10 +128,13 @@ $timeline-base: #f2efe6;
 				}
 				
 			}
+			span {
+				display: none;
+			}
+			.mobile-year {
+				display: inline-block;
+			}
 			
-		}
-		span {
-			display: none;
 		}
 		
 	}
@@ -182,6 +193,9 @@ $timeline-base: #f2efe6;
 						display: none;
 					}
 					
+				}
+				.mobile-year {
+					display: none;
 				}
 			
 			}
