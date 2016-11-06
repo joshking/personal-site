@@ -19,6 +19,9 @@ import { DellComponent } from './work/dell/dell.component';
 import { SofiComponent } from './work/sofi/sofi.component';
 import { TimelineComponent } from './work/timeline/timeline.component';
 import { KineticComponent } from './work/kinetic/kinetic.component';
+import { KOAComponent } from './work/koa/koa.component';
+import { OverviewComponent } from './work/kinetic/overview/overview.component';
+import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kinetic-examples.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { KineticComponent } from './work/kinetic/kinetic.component';
   	DellComponent,
     SofiComponent,
     TimelineComponent,
-    KineticComponent
+    KineticComponent,
+    KOAComponent,
+    OverviewComponent,
+    KineticExamplesComponent
   ],
   imports: [
     BrowserModule,

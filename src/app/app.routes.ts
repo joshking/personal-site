@@ -11,6 +11,9 @@ import { DellComponent } from './work/dell/dell.component';
 import { IndividualComponent } from './work/individual/individual.component';
 import { SofiComponent } from './work/sofi/sofi.component';
 import { KineticComponent } from './work/kinetic/kinetic.component';
+import { KOAComponent } from './work/koa/koa.component';
+import { OverviewComponent } from './work/kinetic/overview/overview.component';
+import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kinetic-examples.component';
 
 const routes: Routes = [
   {
@@ -39,8 +42,18 @@ const routes: Routes = [
       { path: 'individual', component: IndividualComponent },
       { path: 'dell', 			component: DellComponent },
       { path: 'sofi', 			component: SofiComponent },
-      { path: 'kinetic', 		component: KineticComponent },
-      { path: 'timeline', 	component: TimelineComponent }
+      
+      { path: 'kinetic', 		component: KineticComponent,
+	      children: [
+		      { path: '', 					component: OverviewComponent },
+		    	{ path: 'overview', 	component: OverviewComponent },
+		    	{ path: 'kinetic-examples', 	component: KineticExamplesComponent }
+	    	]
+      },
+      
+      { path: 'timeline', 	component: TimelineComponent },
+      { path: 'koa', 				component: KOAComponent }
+      
     ]
   },
   {

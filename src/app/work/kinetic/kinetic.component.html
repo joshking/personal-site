@@ -2,23 +2,7 @@
 	<div class="work__col1">
 		<div class="work__col1--content">
 		
-			<h2>Kinetic Marketing Group</h2>
-			<h5>Billings, MT.</h5>
-			<p>
-				Working at an agency is a fantastic experience for any designer. You get to deal with customers that demand quality. Craftsmanship is a must. One thing about Kinetic, they loved craftsmanship, and were very picky about the customers they brought in. 
-			</p>
-			<p>
-				Here my creativity was able to flourish. I was able to really explore areas of my abilities that I hadn't really been able to use. I dove into photography and videography. I had my first commercial on TV!
-			</p>
-			<p>
-				My job there was a web developer. I was the only one, which forced me to do both front and back end development as well as design. It was challenging, but I loved it.
-			</p>
-			<p>
-				My favorite story has a David and Goliath appeal. The client was KOA (Kampgrounds of America) - whose national headquarters are here in Billings. The proposal was for a newsletter website (KOA Kompass) which was sent out to a serious amount of people. We were up against a large firm in California. It was us (me as the developer resource) against a large team. We ended up winning the bid, and I put together a WordPress website that housed the content of the newsletter. 
-			</p>
-			<p>
-				The day of launch, we sent out the newsletter, and my face was glued to the server stats. We spiked and our servers were taking a huge hit. I was on the phone with Media Temple and we were frantically trying to get enough server resources to handle the load. We managed to get it done, and KOA Kompass was born!
-			</p>
+			<router-outlet></router-outlet>
 			
 		</div>
 	</div>
@@ -38,6 +22,8 @@
 				<li><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i>Video Production</li>
 				<li><i class="fa fa-repeat fa-fw" aria-hidden="true"></i>Photography</li>
 			</ul>
+			
+			<a routerLink="/work/kinetic/kinetic-examples" [routerLinkActive]="['active']">koa</a>
 		
 		</div>
 		
