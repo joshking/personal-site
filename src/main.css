@@ -2702,6 +2702,44 @@ tbody.collapse.in {
   .alert-danger .alert-link {
     color: #843534; }
 
+.media,
+.media-body {
+  overflow: hidden; }
+
+.media-body {
+  width: 10000px; }
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top; }
+
+.media-middle {
+  vertical-align: middle; }
+
+.media-bottom {
+  vertical-align: bottom; }
+
+.media-object {
+  display: block; }
+  .media-object.img-thumbnail {
+    max-width: none; }
+
+.media-right {
+  padding-left: 10px; }
+
+.media-left {
+  padding-right: 10px; }
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.media-list {
+  padding-left: 0;
+  list-style: none; }
+
 .modal-open {
   overflow: hidden; }
 
@@ -3615,6 +3653,10 @@ ul {
   font-size: .8rem; }
   .work__skills li i {
     margin-right: 10px; }
+
+.work__description {
+  padding-top: 20px;
+  font-size: .9em; }
 
 .timeline {
   width: 100%;
