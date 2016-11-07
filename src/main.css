@@ -3576,12 +3576,6 @@ ul {
     width: 100%; }
     .work__col2--content {
       padding: 0px 0px 10px 30px; }
-    .work__col2 .skills li {
-      margin-bottom: 10px;
-      color: #828282;
-      font-size: .9rem; }
-      .work__col2 .skills li i {
-        margin-right: 10px; }
     @media (min-width: 576px) {
       .work__col2 {
         float: left;
@@ -3605,6 +3599,18 @@ ul {
           height: 4px;
           background: #f2efe6;
           z-index: -1; } }
+
+.work__examples li {
+  margin-bottom: 20px; }
+  .work__examples li a {
+    boder: 3px solid #ccc; }
+
+.work__skills li {
+  margin-bottom: 10px;
+  color: #828282;
+  font-size: .9rem; }
+  .work__skills li i {
+    margin-right: 10px; }
 
 .timeline {
   width: 100%;

@@ -25,20 +25,7 @@ $timeline-base: #f2efe6;
 		&--content {
 			padding: 0px 0px 10px 30px;
 		}
-		.skills {
-			
-			li {
-				margin-bottom: 10px;
-				color: #828282;
-				font-size: .9rem;
-				
-				i {
-					margin-right: 10px;
-				}
-				
-			}
-			
-		}
+		
 		@include media-breakpoint-up(sm) {
 			@include make-col(4);
 		}
@@ -71,6 +58,32 @@ $timeline-base: #f2efe6;
 
 		}
 				
+	}
+	
+}
+
+.work__examples {
+	li {
+		margin-bottom: 20px;
+		
+		a {
+			boder: 3px solid #ccc; 	
+		}
+		
+	}
+	
+}
+.work__skills {
+		
+	li {
+		margin-bottom: 10px;
+		color: #828282;
+		font-size: .9rem;
+		
+		i {
+			margin-right: 10px;
+		}
+		
 	}
 	
 }
