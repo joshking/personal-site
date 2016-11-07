@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { OverviewComponent } from './overview.component';
+import { DsOverviewComponent } from './ds-overview.component';
 
-describe('Component: Overview', () => {
+describe('Component: DsOverview', () => {
   it('should create an instance', () => {
-    let component = new OverviewComponent();
+    let component = new DsOverviewComponent();
     expect(component).toBeTruthy();
   });
 });

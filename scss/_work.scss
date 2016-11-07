@@ -30,6 +30,10 @@ $timeline-base: #f2efe6;
 			@include make-col(4);
 		}
 		
+		section {
+			margin-bottom: 30px;
+		}
+		
 	}
 	
 	.work-header {
@@ -63,11 +67,13 @@ $timeline-base: #f2efe6;
 }
 
 .work__examples {
+	
 	li {
 		margin-bottom: 20px;
 		
 		a {
-			boder: 3px solid #ccc; 	
+			border: 4px solid #ccc; 
+			display: block;
 		}
 		
 	}
@@ -76,9 +82,9 @@ $timeline-base: #f2efe6;
 .work__skills {
 		
 	li {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 		color: #828282;
-		font-size: .9rem;
+		font-size: .8rem;
 		
 		i {
 			margin-right: 10px;

@@ -6,7 +6,11 @@ import { ContactComponent } from './contact/contact.component';
 import { WorkComponent } from './work/work.component';
 import { TimelineComponent } from './work/timeline/timeline.component';
 import { IrComponent } from './work/ir/ir.component';
+
 import { DealerspanComponent } from './work/dealerspan/dealerspan.component';
+import { DsOverviewComponent } from './work/dealerspan/ds-overview/ds-overview.component';
+import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
+
 import { DellComponent } from './work/dell/dell.component';
 import { IndividualComponent } from './work/individual/individual.component';
 import { SofiComponent } from './work/sofi/sofi.component';
@@ -38,7 +42,14 @@ const routes: Routes = [
 	  children: [
       { path: '', 					redirectTo: 'work/ir', pathMatch: 'full' },
       { path: 'ir', 				component: IrComponent },
-      { path: 'dealerspan', component: DealerspanComponent },
+      { path: 'dealerspan', component: DealerspanComponent,
+	      children: [
+		      { path: '', 				component: DsOverviewComponent },
+		      { path: 'overview', component: DsOverviewComponent },
+		      { path: 'ds-vid', 	component: DsVidComponent }
+	      ] 
+	      
+      },
       { path: 'individual', component: IndividualComponent },
       { path: 'dell', 			component: DellComponent },
       { path: 'sofi', 			component: SofiComponent },

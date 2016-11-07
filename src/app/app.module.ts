@@ -13,7 +13,10 @@ import { HomeComponent } from './home/home.component';
 
 import { WorkComponent } from './work/work.component';
 import { IrComponent } from './work/ir/ir.component';
+
 import { DealerspanComponent } from './work/dealerspan/dealerspan.component';
+import { DsOverviewComponent } from './work/dealerspan/ds-overview/ds-overview.component';
+
 import { IndividualComponent } from './work/individual/individual.component';
 import { DellComponent } from './work/dell/dell.component';
 import { SofiComponent } from './work/sofi/sofi.component';
@@ -22,6 +25,8 @@ import { KineticComponent } from './work/kinetic/kinetic.component';
 import { KOAComponent } from './work/koa/koa.component';
 import { OverviewComponent } from './work/kinetic/overview/overview.component';
 import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kinetic-examples.component';
+import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +45,9 @@ import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kineti
     KineticComponent,
     KOAComponent,
     OverviewComponent,
-    KineticExamplesComponent
+    KineticExamplesComponent,
+    DsOverviewComponent,
+    DsVidComponent
   ],
   imports: [
     BrowserModule,
