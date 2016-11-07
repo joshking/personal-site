@@ -1,5 +1,5 @@
 .home {
-	@extend .container;
-	margin-top: 100px;
-	position: relative;
+	background: url('/assets/img/background.jpg') no-repeat;
+	background-size: cover;
+	height: 100%;
 }

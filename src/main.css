@@ -591,29 +591,29 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .home, .timeline__container {
+.container, .timeline__container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container::after, .home::after, .timeline__container::after {
+  .container::after, .timeline__container::after {
     content: "";
     display: table;
     clear: both; }
   @media (min-width: 576px) {
-    .container, .home, .timeline__container {
+    .container, .timeline__container {
       width: 540px;
       max-width: 100%; } }
   @media (min-width: 768px) {
-    .container, .home, .timeline__container {
+    .container, .timeline__container {
       width: 720px;
       max-width: 100%; } }
   @media (min-width: 992px) {
-    .container, .home, .timeline__container {
+    .container, .timeline__container {
       width: 960px;
       max-width: 100%; } }
   @media (min-width: 1200px) {
-    .container, .home, .timeline__container {
+    .container, .timeline__container {
       width: 1140px;
       max-width: 100%; } }
 
@@ -3552,8 +3552,9 @@ ul {
   padding: 0; }
 
 .home {
-  margin-top: 100px;
-  position: relative; }
+  background: url("/assets/img/background.jpg") no-repeat;
+  background-size: cover;
+  height: 100%; }
 
 .about {
   margin-top: 60px; }
