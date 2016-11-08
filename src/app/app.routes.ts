@@ -14,10 +14,11 @@ import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 import { DellComponent } from './work/dell/dell.component';
 import { IndividualComponent } from './work/individual/individual.component';
 import { SofiComponent } from './work/sofi/sofi.component';
+
 import { KineticComponent } from './work/kinetic/kinetic.component';
-import { KOAComponent } from './work/koa/koa.component';
 import { OverviewComponent } from './work/kinetic/overview/overview.component';
 import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kinetic-examples.component';
+import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
 
 const routes: Routes = [
   {
@@ -58,12 +59,12 @@ const routes: Routes = [
 	      children: [
 		      { path: '', 					component: OverviewComponent },
 		    	{ path: 'overview', 	component: OverviewComponent },
-		    	{ path: 'kinetic-examples', 	component: KineticExamplesComponent }
+		    	{ path: 'kinetic-examples', 	component: KineticExamplesComponent },
+		    	{ path: 'redlodge', 	component: RedlodgeComponent },
 	    	]
       },
       
-      { path: 'timeline', 	component: TimelineComponent },
-      { path: 'koa', 				component: KOAComponent }
+      { path: 'timeline', 	component: TimelineComponent }
       
     ]
   },

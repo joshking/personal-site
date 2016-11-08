@@ -1,4 +1,5 @@
 $timeline-base: #f2efe6;
+$active-color: #a3c763;
 
 .work {
 	margin-top: 55px;
@@ -74,6 +75,11 @@ $timeline-base: #f2efe6;
 		a {
 			border: 4px solid #ccc; 
 			display: block;
+			-webkit-transition: border 0.5s; 
+			transition: border 0.5s;
+		}
+		a.active {
+			border: 4px solid $active-color;
 		}
 		
 	}
@@ -94,6 +100,11 @@ $timeline-base: #f2efe6;
 	
 }
 .work__screenshot {
+	
+	&--video {
+		@extend .embed-responsive;
+		@extend .embed-responsive-4by3;
+	}
 	
 }
 .work__description {
@@ -143,14 +154,14 @@ $timeline-base: #f2efe6;
 			&:hover {
 				
 				.ball {
-					background: #a3c763
+					background: $active-color;
 				}
 				
 			}
 			.active {
 				
 				.ball {
-					background: #a3c763
+					background: $active-color;
 				}
 				
 			}
