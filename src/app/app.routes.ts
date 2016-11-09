@@ -12,7 +12,11 @@ import { DsOverviewComponent } from './work/dealerspan/ds-overview/ds-overview.c
 import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 
 import { DellComponent } from './work/dell/dell.component';
+
 import { IndividualComponent } from './work/individual/individual.component';
+import { IdOverviewComponent } from './work/individual/id-overview/id-overview.component';
+import { IdExamplesComponent } from './work/individual/id-examples/id-examples.component';
+
 import { SofiComponent } from './work/sofi/sofi.component';
 
 import { KineticComponent } from './work/kinetic/kinetic.component';
@@ -49,9 +53,16 @@ const routes: Routes = [
 		      { path: 'overview', component: DsOverviewComponent },
 		      { path: 'ds-vid', 	component: DsVidComponent }
 	      ] 
-	      
       },
-      { path: 'individual', component: IndividualComponent },
+      
+      { path: 'individual', 	component: IndividualComponent,
+	    	children: [
+		    	{ path: '',							component: IdOverviewComponent },
+		    	{ path: 'id-overview',	component: IdOverviewComponent },
+		    	{ path: 'id-examples',	component: IdExamplesComponent }
+	    	]  
+      },
+      
       { path: 'dell', 			component: DellComponent },
       { path: 'sofi', 			component: SofiComponent },
       

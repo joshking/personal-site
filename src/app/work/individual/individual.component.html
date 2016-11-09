@@ -1,3 +1,39 @@
-<p>
-  individual works!
-</p>
+<div class="row">
+	<div class="work__col1">
+		<div class="work__col1--content">
+		
+			<router-outlet></router-outlet>
+			
+		</div>
+	</div>
+
+	<div class="work__col2">
+		<div class="work__col2--content">
+			
+			<section>
+				<h5>Example Work</h5>
+				<ul class="work__examples">
+					<li>
+						<a routerLink="/work/individual/id-examples" [routerLinkActive]="['active']">
+							<img src="/assets/img/thumb/revjam.jpg" class="img-fluid">
+						</a>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+		
+				<h5>Skills used</h5>
+				
+				<ul class="work__skills">
+					<li><i class="fa fa-crop fa-fw" aria-hidden="true"></i>UI / UX Design</li>
+					<li><i class="fa fa-code fa-fw" aria-hidden="true"></i>HTML/CSS</li>
+					<li><i class="fa fa-code fa-fw" aria-hidden="true"></i>jQuery</li>
+				</ul>
+				
+			</section>
+		
+		</div>
+		
+	</div>
+</div>

@@ -18,16 +18,20 @@ import { DealerspanComponent } from './work/dealerspan/dealerspan.component';
 import { DsOverviewComponent } from './work/dealerspan/ds-overview/ds-overview.component';
 
 import { IndividualComponent } from './work/individual/individual.component';
+import { IdOverviewComponent } from './work/individual/id-overview/id-overview.component';
+import { IdExamplesComponent } from './work/individual/id-examples/id-examples.component';
+
 import { DellComponent } from './work/dell/dell.component';
 import { SofiComponent } from './work/sofi/sofi.component';
 import { TimelineComponent } from './work/timeline/timeline.component';
 import { KineticComponent } from './work/kinetic/kinetic.component';
-import { KOAComponent } from './work/koa/koa.component';
 
 import { OverviewComponent } from './work/kinetic/overview/overview.component';
 import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kinetic-examples.component';
 import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
+
+
 
 
 @NgModule({
@@ -49,7 +53,9 @@ import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
     KineticExamplesComponent,
     DsOverviewComponent,
     DsVidComponent,
-    RedlodgeComponent
+    RedlodgeComponent,
+    IdOverviewComponent,
+    IdExamplesComponent
   ],
   imports: [
     BrowserModule,
