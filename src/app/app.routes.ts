@@ -12,6 +12,10 @@ import { DsOverviewComponent } from './work/dealerspan/ds-overview/ds-overview.c
 import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 
 import { DellComponent } from './work/dell/dell.component';
+import { DellOverviewComponent } from './work/dell/dell-overview/dell-overview.component';
+import { DellServiceDeskComponent } from './work/dell/dell-service-desk/dell-service-desk.component';
+import { DellItninjaComponent } from './work/dell/dell-itninja/dell-itninja.component';
+import { SoftwareComponent } from './work/dell/software/software.component';
 
 import { IndividualComponent } from './work/individual/individual.component';
 import { IdOverviewComponent } from './work/individual/id-overview/id-overview.component';
@@ -45,7 +49,7 @@ const routes: Routes = [
     path: 'work',
     component: WorkComponent,
 	  children: [
-      { path: '', 					redirectTo: 'work/ir', pathMatch: 'full' },
+      { path: '', 					redirectTo: 'work/ir' },
       { path: 'ir', 				component: IrComponent },
       { path: 'dealerspan', component: DealerspanComponent,
 	      children: [
@@ -63,7 +67,16 @@ const routes: Routes = [
 	    	]  
       },
       
-      { path: 'dell', 			component: DellComponent },
+      { path: 'dell', 						component: DellComponent,
+	      children: [
+		      { path: '', 						component: DellOverviewComponent },
+		      { path: 'overview', 		component: DellOverviewComponent },
+		      { path: 'itninja', 			component: DellItninjaComponent },
+		      { path: 'service-desk',	component: DellServiceDeskComponent },
+		      { path: 'software',			component: SoftwareComponent }
+	      ]
+      },
+      
       { path: 'sofi', 			component: SofiComponent },
       
       { path: 'kinetic', 		component: KineticComponent,

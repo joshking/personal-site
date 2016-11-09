@@ -22,6 +22,10 @@ import { IdOverviewComponent } from './work/individual/id-overview/id-overview.c
 import { IdExamplesComponent } from './work/individual/id-examples/id-examples.component';
 
 import { DellComponent } from './work/dell/dell.component';
+import { DellOverviewComponent } from './work/dell/dell-overview/dell-overview.component';
+import { DellItninjaComponent } from './work/dell/dell-itninja/dell-itninja.component';
+import { DellServiceDeskComponent } from './work/dell/dell-service-desk/dell-service-desk.component';
+
 import { SofiComponent } from './work/sofi/sofi.component';
 import { TimelineComponent } from './work/timeline/timeline.component';
 import { KineticComponent } from './work/kinetic/kinetic.component';
@@ -30,6 +34,8 @@ import { OverviewComponent } from './work/kinetic/overview/overview.component';
 import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kinetic-examples.component';
 import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
+import { SoftwareComponent } from './work/dell/software/software.component';
+
 
 
 
@@ -55,7 +61,11 @@ import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
     DsVidComponent,
     RedlodgeComponent,
     IdOverviewComponent,
-    IdExamplesComponent
+    IdExamplesComponent,
+    DellOverviewComponent,
+    DellItninjaComponent,
+    DellServiceDeskComponent,
+    SoftwareComponent
   ],
   imports: [
     BrowserModule,
