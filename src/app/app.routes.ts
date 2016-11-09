@@ -4,6 +4,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { WorkComponent } from './work/work.component';
+import { WorkOverviewComponent } from './work/work-overview/work-overview.component';
+
 import { TimelineComponent } from './work/timeline/timeline.component';
 import { IrComponent } from './work/ir/ir.component';
 
@@ -49,7 +51,7 @@ const routes: Routes = [
     path: 'work',
     component: WorkComponent,
 	  children: [
-      { path: '', 					redirectTo: 'work/ir' },
+      { path: '', 					component: WorkOverviewComponent },
       { path: 'ir', 				component: IrComponent },
       { path: 'dealerspan', component: DealerspanComponent,
 	      children: [

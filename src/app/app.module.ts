@@ -12,6 +12,8 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 
 import { WorkComponent } from './work/work.component';
+import { WorkOverviewComponent } from './work/work-overview/work-overview.component';
+
 import { IrComponent } from './work/ir/ir.component';
 
 import { DealerspanComponent } from './work/dealerspan/dealerspan.component';
@@ -35,8 +37,6 @@ import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kineti
 import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
 import { SoftwareComponent } from './work/dell/software/software.component';
-
-
 
 
 
@@ -65,7 +65,8 @@ import { SoftwareComponent } from './work/dell/software/software.component';
     DellOverviewComponent,
     DellItninjaComponent,
     DellServiceDeskComponent,
-    SoftwareComponent
+    SoftwareComponent,
+    WorkOverviewComponent
   ],
   imports: [
     BrowserModule,

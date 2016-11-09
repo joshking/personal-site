@@ -2771,6 +2771,27 @@ tbody.collapse.in {
 .embed-responsive-1by1 {
   padding-bottom: 100%; }
 
+.close {
+  float: right;
+  font-size: 1.35rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2; }
+  .close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5; }
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
 .modal-open {
   overflow: hidden; }
 
@@ -3603,7 +3624,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 .navbar {
-  height: 60px;
   background-color: #191919;
   color: #efefef; }
   .navbar .nav {
