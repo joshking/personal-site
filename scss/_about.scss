@@ -4,6 +4,47 @@
 		background: url('/assets/img/background.jpg') 0 15% no-repeat;
 		background-size: cover;
 		min-height: 600px;
+		position: relative;
+		
+		H1 {
+			position: absolute;
+			top: 20%;
+			left: 20%;
+			font-family: teko, "Open Sans";
+			color: #90788e;	
+			font-size: 4rem;
+		}
+		
+	}
+	&__bio {
+		padding-top: 70px;
+		
+		&--text {
+			@include make-col(12);
+			
+			@include media-breakpoint-up(sm) {
+				@include make-col(8);
+				padding-right: 70px;
+			}
+			
+		}
+		&--photo {
+			@include make-col(12);
+			
+			
+			p {
+				padding-top: 8px;
+				font-size: .8em;
+				color: #666;	
+			}
+			
+			@include media-breakpoint-up(sm) {
+				padding-top: 50px;
+				@include make-col(4);
+			}
+			
+		}
+		
 	}
 	
 }

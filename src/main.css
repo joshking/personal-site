@@ -3657,15 +3657,15 @@ ul {
     .home__intro--hello, .home__intro--meta {
       color: #c0812b; }
     .home__intro--hello {
-      font-size: 2rem;
+      font-size: 2.1rem;
       line-height: 0.8em; }
     .home__intro--name {
       font-family: teko, "Open Sans";
-      font-size: 4rem;
+      font-size: 4.2rem;
       color: #90788e;
       line-height: 1.4em; }
     .home__intro--meta {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       line-height: 0em; }
     .home__intro--social {
       margin-top: 30px; }
@@ -3682,14 +3682,45 @@ ul {
             text-align: center;
             color: #90788e;
             display: block;
-            width: 50px;
-            height: 50px;
+            width: 42px;
+            height: 42px;
             cursor: pointer; }
 
 .about__cover {
   background: url("/assets/img/background.jpg") 0 15% no-repeat;
   background-size: cover;
-  min-height: 600px; }
+  min-height: 600px;
+  position: relative; }
+  .about__cover H1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-family: teko, "Open Sans";
+    color: #90788e;
+    font-size: 4rem; }
+
+.about__bio {
+  padding-top: 70px; }
+  .about__bio--text {
+    float: left;
+    width: 100%; }
+    @media (min-width: 576px) {
+      .about__bio--text {
+        float: left;
+        width: 66.66667%;
+        padding-right: 70px; } }
+  .about__bio--photo {
+    float: left;
+    width: 100%; }
+    .about__bio--photo p {
+      padding-top: 8px;
+      font-size: .8em;
+      color: #666; }
+    @media (min-width: 576px) {
+      .about__bio--photo {
+        padding-top: 50px;
+        float: left;
+        width: 33.33333%; } }
 
 .work {
   margin-top: 55px; }
