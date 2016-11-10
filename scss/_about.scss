@@ -1,5 +1,11 @@
 .about {
-	margin-top: 60px;
+	
+	&__cover {
+		background: url('/assets/img/background.jpg') 0 15% no-repeat;
+		background-size: cover;
+		min-height: 600px;
+	}
+	
 }
 .timeline {
 	

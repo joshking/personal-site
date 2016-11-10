@@ -1,5 +1,79 @@
 .home {
-	background: url('/assets/img/background.jpg') no-repeat;
+	background: #dfd6c6 url('/assets/img/front.jpg') no-repeat;
 	background-size: cover;
 	height: 100%;
+	position: relative;
+	
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) { 
+		  
+		  background: url('/assets/img/front@2x.jpg') no-repeat;
+		
+		}
+	
+	&__intro {
+		position: absolute;
+		top: 20%;
+		right:20%;
+		
+		&--hello,
+		&--name,
+		&--meta {
+			text-align: justify;
+		}
+		
+		&--hello,
+		&--meta {
+			color: #c0812b;
+		}
+		&--hello {
+			font-size: 2rem;
+			line-height: 0.8em;
+		}
+		&--name {
+			font-family: teko, "Open Sans";
+			font-size: 4rem;
+			color: #90788e;
+			line-height: 1.4em;
+		}
+		&--meta {
+			font-size: 1.4rem;
+			line-height: 0em;
+		}
+		&--social {
+			margin-top: 30px;
+			
+			ul {
+				text-align: center;
+				line-height: 50px;
+				
+				li {
+					display: inline-block;
+					margin: 0 5px;
+					text-align: center;
+					
+					a {
+						border-radius: 50%;
+						font-size: 1.6em;
+						text-align: center;
+						color: #90788e;
+						display: block;
+						width: 50px;
+						height: 50px;
+						cursor: pointer;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
 }

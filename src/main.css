@@ -421,7 +421,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: "Open Sans", sans-serif;
   font-weight: 100;
   line-height: 1.1;
   color: inherit; }
@@ -3641,12 +3641,55 @@ ul {
   padding: 0; }
 
 .home {
-  background: url("/assets/img/background.jpg") no-repeat;
+  background: #dfd6c6 url("/assets/img/front.jpg") no-repeat;
   background-size: cover;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .home {
+      background: url("/assets/img/front@2x.jpg") no-repeat; } }
+  .home__intro {
+    position: absolute;
+    top: 20%;
+    right: 20%; }
+    .home__intro--hello, .home__intro--name, .home__intro--meta {
+      text-align: justify; }
+    .home__intro--hello, .home__intro--meta {
+      color: #c0812b; }
+    .home__intro--hello {
+      font-size: 2rem;
+      line-height: 0.8em; }
+    .home__intro--name {
+      font-family: teko, "Open Sans";
+      font-size: 4rem;
+      color: #90788e;
+      line-height: 1.4em; }
+    .home__intro--meta {
+      font-size: 1.4rem;
+      line-height: 0em; }
+    .home__intro--social {
+      margin-top: 30px; }
+      .home__intro--social ul {
+        text-align: center;
+        line-height: 50px; }
+        .home__intro--social ul li {
+          display: inline-block;
+          margin: 0 5px;
+          text-align: center; }
+          .home__intro--social ul li a {
+            border-radius: 50%;
+            font-size: 1.6em;
+            text-align: center;
+            color: #90788e;
+            display: block;
+            width: 50px;
+            height: 50px;
+            cursor: pointer; }
 
-.about {
-  margin-top: 60px; }
+.about__cover {
+  background: url("/assets/img/background.jpg") 0 15% no-repeat;
+  background-size: cover;
+  min-height: 600px; }
 
 .work {
   margin-top: 55px; }
