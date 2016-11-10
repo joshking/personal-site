@@ -37,6 +37,8 @@ import { KineticExamplesComponent } from './work/kinetic/kinetic-examples/kineti
 import { DsVidComponent } from './work/dealerspan/ds-vid/ds-vid.component';
 import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
 import { SoftwareComponent } from './work/dell/software/software.component';
+import { SofiOverviewComponent } from './work/sofi/sofi-overview/sofi-overview.component';
+import { SofiSocialComponent } from './work/sofi/sofi-social/sofi-social.component';
 
 
 
@@ -66,7 +68,9 @@ import { SoftwareComponent } from './work/dell/software/software.component';
     DellItninjaComponent,
     DellServiceDeskComponent,
     SoftwareComponent,
-    WorkOverviewComponent
+    WorkOverviewComponent,
+    SofiOverviewComponent,
+    SofiSocialComponent
   ],
   imports: [
     BrowserModule,

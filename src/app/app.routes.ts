@@ -24,6 +24,8 @@ import { IdOverviewComponent } from './work/individual/id-overview/id-overview.c
 import { IdExamplesComponent } from './work/individual/id-examples/id-examples.component';
 
 import { SofiComponent } from './work/sofi/sofi.component';
+import { SofiOverviewComponent } from './work/sofi/sofi-overview/sofi-overview.component';
+import { SofiSocialComponent } from './work/sofi/sofi-social/sofi-social.component';
 
 import { KineticComponent } from './work/kinetic/kinetic.component';
 import { OverviewComponent } from './work/kinetic/overview/overview.component';
@@ -79,7 +81,13 @@ const routes: Routes = [
 	      ]
       },
       
-      { path: 'sofi', 			component: SofiComponent },
+      { path: 'sofi', 			component: SofiComponent,
+	      children: [
+		      { path: '', 								component: SofiOverviewComponent },
+		      { path: 'sofi-overview', 		component: SofiOverviewComponent },
+		      { path: 'sofi-social', 			component: SofiSocialComponent }
+	      ]
+      },
       
       { path: 'kinetic', 		component: KineticComponent,
 	      children: [
