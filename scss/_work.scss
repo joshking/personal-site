@@ -63,6 +63,29 @@ $active-color: #a3c763;
 		}
 				
 	}
+	&__overview {
+		@include make-col(12);
+		
+		@include media-breakpoint-up(sm) {
+			@include make-col(8);
+			padding-right: 70px;
+		}
+		
+	}
+	&__abilities {
+		@include make-col(12);
+		
+		@include media-breakpoint-up(sm) {
+			@include make-col(4);
+		}
+		&--desc {
+			@extend .text-xs-left;
+			font-size: .85em;
+			color: #666;
+			margin-bottom: 5px;
+		}
+		
+	}
 	
 }
 
