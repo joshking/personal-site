@@ -4002,7 +4002,9 @@ ul {
   border-radius: 50%;
   background: #f2efe6;
   display: inline-block;
-  margin-right: 10px; }
+  margin-right: 10px;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s; }
 
 @media (min-width: 576px) {
   .timeline .ball {

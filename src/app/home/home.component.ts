@@ -2,11 +2,8 @@ import {
 	Component, 
 	OnInit,
 	Input,
-	trigger,
-	state,
-	style,
-	transition,
-	animate } from '@angular/core';
+	trigger } from '@angular/core';
+import {Animations} from '../page-animate';
 
 @Component({
   selector: 'app-home',
@@ -21,21 +18,7 @@ import {
    '[style.bottom]' : "'0'",
    '[style.background]' : "'#ccc'"
   },
-  animations: [
-    trigger('routeAnimation', [
-	    	
-	    	state('*', style({transform: 'translateX(0)', opacity: 1})),
-				
-				transition('void => *', [
-		      style({transform: 'translateX(-100%)'}),
-		      animate(100)
-		    ]),
-				transition('* => void', [
-					animate(100, style({opacity: 0, transform: 'translateX(100%)'}))
-				])
-				         
-    ])
-  ]
+  animations: Animations.page
 
 })
 export class HomeComponent implements OnInit {
