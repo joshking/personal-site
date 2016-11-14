@@ -2,13 +2,20 @@
 	background-color: #191919;
 	color: #efefef;
 	
+	@include media-breakpoint-up(sm) {
+		padding: 0.5rem 3rem;
+	}
+	
 	.nav {
-		margin-top: 0;	
+		margin-top: 0;
 	}
 	
 	a {
 		color: #efefef;
 		text-decoration: none;
+	}
+	.nav-item {
+		margin-right: 20px;
 	}
 	
 }
@@ -21,4 +28,46 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+footer {
+	margin-top: 40px;
+	padding: 40px 30px;
+	border-top: 1px solid #ccc;
+	min-height: 120px;
+}
+
+.footer__build {
+	@include make-col(8);
+	color: #999;
+	
+	a {
+		color: $brand-purple;
+	}
+	
+}
+.footer__social {
+	@include make-col(4);
+	
+	ul li {
+		float: right;
+		margin-left: 10px;
+		
+		a {
+			display: block;
+			width: 42px;
+			height: 42px;
+			color: #999;
+			font-size: 1.8em;
+			-webkit-transition: color 0.5s; 
+			transition: color 0.5s;
+			
+			&:hover{
+				color: $brand-purple;		
+			}
+			
+		}
+		
+	}	
+	
 }

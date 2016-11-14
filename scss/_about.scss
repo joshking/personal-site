@@ -11,7 +11,7 @@
 			top: 20%;
 			left: 20%;
 			font-family: teko, "Open Sans";
-			color: #90788e;	
+			color: $brand-purple;	
 			font-size: 4rem;
 		}
 		
@@ -25,6 +25,7 @@
 			@include media-breakpoint-up(sm) {
 				@include make-col(8);
 				padding-right: 70px;
+				padding-bottom: 50px;
 			}
 			
 		}

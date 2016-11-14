@@ -39,6 +39,7 @@ import { RedlodgeComponent } from './work/kinetic/redlodge/redlodge.component';
 import { SoftwareComponent } from './work/dell/software/software.component';
 import { SofiOverviewComponent } from './work/sofi/sofi-overview/sofi-overview.component';
 import { SofiSocialComponent } from './work/sofi/sofi-social/sofi-social.component';
+import { MyFooterComponent } from './my-footer/my-footer.component';
 
 
 
@@ -70,7 +71,8 @@ import { SofiSocialComponent } from './work/sofi/sofi-social/sofi-social.compone
     SoftwareComponent,
     WorkOverviewComponent,
     SofiOverviewComponent,
-    SofiSocialComponent
+    SofiSocialComponent,
+    MyFooterComponent
   ],
   imports: [
     BrowserModule,

@@ -38,7 +38,7 @@
 		&--name {
 			font-family: teko, "Open Sans";
 			font-size: 4.2rem;
-			color: #90788e;
+			color: $brand-purple;
 			line-height: 1.4em;
 		}
 		&--meta {
@@ -61,7 +61,7 @@
 						border-radius: 50%;
 						font-size: 1.6em;
 						text-align: center;
-						color: #90788e;
+						color: $brand-purple;
 						display: block;
 						width: 42px;
 						height: 42px;

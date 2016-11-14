@@ -63,6 +63,9 @@ $active-color: #a3c763;
 		}
 				
 	}
+	&__main {
+		padding-bottom: 80px;
+	}
 	&__overview {
 		@include make-col(12);
 		
