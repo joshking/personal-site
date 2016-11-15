@@ -3952,7 +3952,9 @@ footer {
       .work__overview {
         float: left;
         width: 66.66667%;
-        padding-right: 70px; } }
+        padding-right: 70px; }
+        .work__overview h3 {
+          margin-top: 30px; } }
   .work__abilities {
     float: left;
     width: 100%; }
@@ -3985,6 +3987,10 @@ footer {
 .work__screenshot ul li {
   border: 5px solid #ccc;
   margin-bottom: 25px; }
+
+.work__screenshot--id li {
+  background: #000;
+  text-align: center; }
 
 .work__description {
   padding-top: 20px;
