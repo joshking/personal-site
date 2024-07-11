@@ -1,0 +1,109 @@
+# This config was automatically generated from your source code
+# Stacks detected: deps:java:node_modules/less,deps:node:.,deps:php:node_modules/filesize,deps:python:node_modules/jasmine-core,deps:ruby:node_modules/underscore.string,file:setup.py:node_modules/node-gyp/gyp,tool:gradle:
+version: 2.1
+orbs:
+  node: circleci/node@5
+  python: circleci/python@2
+  ruby: circleci/ruby@2.0.1
+jobs:
+  test-node:
+    # Install node dependencies and run tests
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
+      - run:
+          name: Run tests
+          command: npm test --passWithNoTests
+  test-java:
+    docker:
+      - image: cimg/openjdk:17.0
+    working_directory: ~/project/node_modules/less
+    steps:
+      - checkout:
+          path: ~/project
+      - run:
+          name: Calculate cache key
+          command: |-
+            find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
+                    sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
+      - restore_cache:
+          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+      - run:
+          command: ./gradlew check
+      - store_test_results:
+          path: build/test-results
+      - save_cache:
+          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+          paths:
+            - ~/.gradle/caches
+      - store_artifacts:
+          path: build/reports
+  test-python:
+    # Install dependencies and run tests
+    docker:
+      - image: cimg/python:3.8-node
+    working_directory: ~/project/node_modules/jasmine-core
+    steps:
+      - checkout:
+          path: ~/project
+      - python/install-packages:
+          pkg-manager: pip-dist
+      - run:
+          name: Run tests
+          command: pytest --junitxml=junit.xml || ((($? == 5)) && echo 'Did not find any tests to run.')
+      - store_test_results:
+          path: junit.xml
+  build-package:
+    # build python package
+    docker:
+      - image: cimg/python:3.8-node
+    steps:
+      - checkout:
+          path: ~/project
+      - run:
+          name: Create the ~/artifacts directory if it doesn't exist
+          command: mkdir -p ~/artifacts
+      - python/dist
+      - store_artifacts:
+          path: dist
+          destination: ~/artifacts
+  test-ruby:
+    # Install gems, run rake tests
+    docker:
+      - image: cimg/ruby:3.2-node
+    working_directory: ~/project/node_modules/underscore.string
+    steps:
+      - checkout:
+          path: ~/project
+      - ruby/install-deps
+      - run:
+          name: rake test
+          command: bundle exec rake test
+  deploy:
+    # This is an example deploy job, not actually used by the workflow
+    docker:
+      - image: cimg/base:stable
+    steps:
+      # Replace this with steps to deploy to users
+      - run:
+          name: deploy
+          command: '#e.g. ./deploy.sh'
+workflows:
+  build-and-test:
+    jobs:
+      - test-node
+      - test-java
+      - test-python
+      - build-package:
+          requires:
+            - test-node
+            - test-java
+            - test-python
+            - test-ruby
+      - test-ruby
+    # - deploy:
+    #     requires:
+    #       - build-package
